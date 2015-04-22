@@ -1,5 +1,6 @@
 <?php
 
+
     $json = json_decode(file_get_contents('php://input'));
     $nickname = $json->userid;
     $score = $json->score;
@@ -79,7 +80,7 @@ function getTop10() {
     if ($result->num_rows > 0) {
         $value = "<table><tr><th>Rank</th><th>User</th><th>Top 10 Scores</th></tr>";
         while($row = $result->fetch_assoc()) {
-            $value .= "<tr><td>".$rank."</td><td>".$row["nickname"]."</td><td>".$row["highestscore"]." ".$row["lastname"]."</td></tr>";
+            $value .= "<tr><td>".$rank."</td><td>".$row["nickname"]."</td><td>".$row["highestscore"]."</td></tr>";
             $rank++;
         }
         $value .= "</table>";
