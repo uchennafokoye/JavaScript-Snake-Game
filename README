@@ -1,0 +1,6 @@
+Hello. This is a HTML5 game implementing basic controls. If you were ever a bi
+gamer, you  may have heard of the game featuring a snake and the apple. Hit the wall or run the head against any part of the body, and the player loses a life. Eat the apple, and the snake grows longer. 
+
+You would need PHP and MAMP installed to run the game. 
+
+To view the game without PHP, stay tuned.  
