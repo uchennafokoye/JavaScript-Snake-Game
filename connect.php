@@ -3,13 +3,25 @@
 	
 //DATABASE INFORMATION
 
+/*
 	$host = "localhost";
 	$username = "fokoye";
 	$password = "dance_92";
 	$db = "eat_apple";
+	$connect = new mysqli($host, $username, $password, $db, 3306);
+
+	*/
+
+	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+	$host = $url["host"];
+	$username = $url["user"];
+	$password = $url["pass"];
+	$db = substr($url["path"], 1);
+
+	$connect = new mysqli($server, $username, $password, $db);
 
 	// ESTABLISH CONNECTION
-	$connect = new mysqli($host, $username, $password, $db, 3306);
 	if ($connect->connect_error) {
 		die("Connection failed: " . $connect->connect_error); 
 	} else {
