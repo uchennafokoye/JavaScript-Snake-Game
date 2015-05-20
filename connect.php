@@ -12,7 +12,7 @@
 
 	*/
 
-	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+	$url = parse_url(getenv("DATABASE_URL"));
 
 	$host = $url["host"];
 	$username = $url["user"];
@@ -26,10 +26,7 @@
 	// ESTABLISH CONNECTION
 	if ($connect->connect_error) {
 		die("Connection failed: " . $connect->connect_error); 
-	} else {
-		echo "Connected successfully";
-	}
-
+	} 
 
 	// CREATE TABLE
 	$result = $connect->query("SHOW TABLES LIKE 'HighestScore'");
