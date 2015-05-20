@@ -2,18 +2,20 @@
 
 	
 //DATABASE INFORMATION
-	$url = parse_url(getenv(CLEARDB_DATABASE_URL));
 
-	$server = "us-cdbr-iron-east-02.cleardb.net";
-	$username = "b953363084be89";
-	$password = "95140d2e";
-	$db = "heroku_874c77c8c5f7a93";
+	$host = "localhost";
+	$username = "fokoye";
+	$password = "dance_92";
+	$db = "eat_apple";
 
 	// ESTABLISH CONNECTION
-	$connect = new mysqli($host, $username, $password, $db);
+	$connect = new mysqli($host, $username, $password, $db, 3306);
 	if ($connect->connect_error) {
 		die("Connection failed: " . $connect->connect_error); 
-	} 
+	} else {
+		echo "Connected successfully";
+	}
+
 
 	// CREATE TABLE
 	$result = $connect->query("SHOW TABLES LIKE 'HighestScore'");
@@ -23,8 +25,9 @@
 		nickname VARCHAR(30), 
 		highestscore INT(6) UNSIGNED
 		)";
+		$connect->query($sql); 
 		
-	}
+	} 
 
 
 ?>
