@@ -3,14 +3,7 @@
 	
 //DATABASE INFORMATION
 
-/*
-	$host = "localhost";
-	$username = "fokoye";
-	$password = "dance_92";
-	$db = "eat_apple";
-	$connect = new mysqli($host, $username, $password, $db, 3306);
 
-	*/
 
 	$url = parse_url(getenv("DATABASE_URL"));
 
