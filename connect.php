@@ -19,7 +19,9 @@
 	$password = $url["pass"];
 	$db = substr($url["path"], 1);
 
-	$connect = new mysqli($server, $username, $password, $db);
+
+
+	$connect = new mysqli($host, $username, $password, $db);
 
 	// ESTABLISH CONNECTION
 	if ($connect->connect_error) {
