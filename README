@@ -1,6 +1,7 @@
-Hello. This is a HTML5 game implementing basic controls. If you were ever a bi
-gamer, you  may have heard of the game featuring a snake and the apple. Hit the wall or run the head against any part of the body, and the player loses a life. Eat the apple, and the snake grows longer. 
+Classic Snake Game: 
+Github Link: https://github.com/uchennafokoye/classic-snake-game-101
+Heroku Live Link: https://classic-snake-game-101.herokuapp.com/
 
-You would need PHP and MAMP installed to run the game. 
+This features the classic snake game, where the snake eats the apple. Upon eating an apple, the snake grows longer and moves faster. If it however bumps into itself or against the wall, the user loses and the snake dies. The user controls the snake with the arrow keys: left, right, up and down. 
 
-To view the game without PHP, stay tuned.  
+On the programming angle, I made use of HTML5 canvas and pure Vanilla JavaScript. I particularly appreciated this project as it allowed me to make use of some particular computer science projects such as Linked List. I had previously coded the game without this data structure. However, I faced a number of challenges including unexpected behaviors and performance issues. I decided to refactor the code making use of the well-known algorithm linked list to represent the snake creature. This got rid of the unwanted behavior and dramatically improved performance.  
